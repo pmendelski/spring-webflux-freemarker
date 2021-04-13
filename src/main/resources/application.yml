@@ -1,10 +1,1 @@
 server.port: 8080
-
-spring:
-  profiles:
-    active: local
-  application:
-    name: "spring-webflux-freemarker"
-  freemarker:
-    templateLoaderPath: "classpath:/templates"
-    suffix: ".ftl"

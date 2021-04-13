@@ -6,7 +6,6 @@ plugins {
     id("application")
 }
 
-group = "org.inkaust"
 version = "0.0.1-SNAPSHOT"
 
 repositories {
@@ -19,10 +18,8 @@ application {
 
 dependencies {
     implementation(kotlin("reflect"))
-    implementation("ch.qos.logback:logback-classic:1.2.3")
-    implementation("org.freemarker:freemarker:2.3.31")
-    implementation("org.springframework.boot:spring-boot-starter-webflux:2.3.0.RELEASE")
-    implementation("org.springframework.boot:spring-boot-starter-freemarker:2.3.0.RELEASE")
+    implementation("org.springframework.boot:spring-boot-starter-webflux:2.4.4")
+    implementation("io.projectreactor.tools:blockhound:1.0.6.RELEASE")
 }
 
 tasks.withType<KotlinCompile> {
