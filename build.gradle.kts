@@ -1,12 +1,8 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
-    kotlin("jvm") version "1.4.32"
-    id("org.jetbrains.kotlin.plugin.spring") version "1.4.32"
+    id("java")
     id("application")
 }
 
-group = "org.inkaust"
 version = "0.0.1-SNAPSHOT"
 
 repositories {
@@ -18,16 +14,7 @@ application {
 }
 
 dependencies {
-    implementation(kotlin("reflect"))
-    implementation("ch.qos.logback:logback-classic:1.2.3")
-    implementation("org.freemarker:freemarker:2.3.31")
-    implementation("org.springframework.boot:spring-boot-starter-webflux:2.3.0.RELEASE")
-    implementation("org.springframework.boot:spring-boot-starter-freemarker:2.3.0.RELEASE")
-}
-
-tasks.withType<KotlinCompile> {
-    kotlinOptions {
-        jvmTarget = "11"
-        allWarningsAsErrors = true
-    }
+    implementation("org.springframework.boot:spring-boot-starter-webflux:2.4.4")
+    implementation("org.springframework.boot:spring-boot-starter-freemarker:2.4.4")
+    implementation("io.projectreactor.tools:blockhound:1.0.6.RELEASE")
 }
